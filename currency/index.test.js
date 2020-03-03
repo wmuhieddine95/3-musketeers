@@ -39,38 +39,58 @@ beforeEach(() => {
     });
 });
 
-test('convert 1 USD to EUR', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
-});
+describe('currency', () => {
+  test('should convert 1 USD to EUR', async () => {
+    throw new Error(
+      'test not yet defined... remove the throw and write your test here'
+    );
+  });
 
-test('convert 1 USD to USD', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
-});
+  test('should convert 1 USD to USD', async () => {
+    throw new Error(
+      'test not yet defined... remove the throw and write your test here'
+    );
+  });
 
-test('convert 1 EUR to USD', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
-});
+  test('should convert 1 EUR to USD', async () => {
+    throw new Error(
+      'test not yet defined... remove the throw and write your test here'
+    );
+  });
 
-test('convert 1 BTC to USD', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
-});
+  test('should convert 1 BTC to USD', async () => {
+    throw new Error(
+      'test not yet defined... remove the throw and write your test here'
+    );
+  });
 
-test('convert 1 BTC to EUR', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
-});
+  test('should convert 1 BTC to EUR', async () => {
+    throw new Error(
+      'test not yet defined... remove the throw and write your test here'
+    );
+  });
 
-test('convert without arguments', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
-});
+  test('should convert (with default values) without arguments', async () => {
+    throw new Error(
+      'test not yet defined... remove the throw and write your test here'
+    );
+  });
 
-test('convert with amount only', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
-});
+  test('should convert with amount only as argument', async () => {
+    throw new Error(
+      'test not yet defined... remove the throw and write your test here'
+    );
+  });
 
-test('convert with amount and (from) currency only', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
-});
+  test('should convert with amount and (from) currency only as arguments', async () => {
+    throw new Error(
+      'test not yet defined... remove the throw and write your test here'
+    );
+  });
 
-test('convert without a correct `from` or `to` currency value', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+  test('should return errors message for unknown `from` or `to` currency value', async () => {
+    throw new Error(
+      'test not yet defined... remove the throw and write your test here'
+    );
+  });
 });
