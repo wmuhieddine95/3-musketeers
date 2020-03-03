@@ -77,10 +77,34 @@ README.md, Comments and Unit Tests
 
 ---
 
-* Understand first the library features
-* Write documentation with README.md
-* Write comments
-* Write Unit Tests
+Understand first the library features
+
+---
+
+
+Write documentation with README.md
+
+---
+
+![readme](./readme.png)
+
+---
+
+Write comments
+
+---
+
+![code](./code.png)
+
+
+---
+
+Write Unit Tests
+
+---
+
+![tests](./tests.png)
+
 
 ---
 
