@@ -1,4 +1,7 @@
+//Mock (Sample Code) From API
 const nock = require('nock');
+const index = require('./index');
+//const cli = require('./cli.js');
 
 beforeEach(() => {
   nock('https://api.exchangeratesapi.io')
@@ -41,51 +44,61 @@ beforeEach(() => {
 
 describe('currency', () => {
   test('should convert 1 USD to EUR', async () => {
-    throw new Error(
-      'test not yet defined... remove the throw and write your test here'
-    );
+    conversionOpts={
+      'from': 'USD',
+      'to': 'EUR'
+    });
+      expect(index(1,conversionOpts)).tobe(0.899);
   });
 
   test('should convert 1 USD to USD', async () => {
-    throw new Error(
-      'test not yet defined... remove the throw and write your test here'
-    );
+    conversionOpts={
+      'from': 'USD',
+      'to': 'USD'
+    });
+      expect(index(1,conversionOpts)).tobe(1);
   });
 
   test('should convert 1 EUR to USD', async () => {
-    throw new Error(
-      'test not yet defined... remove the throw and write your test here'
-    );
+    conversionOpts={
+      'from': 'EUR',
+      'to': 'USD'
+    });
+      expect(index(1,conversionOpts)).tobe(1.1122);
   });
 
   test('should convert 1 BTC to USD', async () => {
-    throw new Error(
-      'test not yet defined... remove the throw and write your test here'
-    );
+    conversionOpts={
+      'from': 'BTC',
+      'to': 'USD'
+    });
+      expect(index(1,conversionOpts)).toBeCloseTo(0.00018946678363082774);
   });
 
   test('should convert 1 BTC to EUR', async () => {
-    throw new Error(
-      'test not yet defined... remove the throw and write your test here'
-    );
+    conversionOpts={
+      'from': 'BTC',
+      'to': 'EUR'
+    };
+      expect(index(1,conversionOpts)).tobe(4807.77);
   });
 
   test('should convert (with default values) without arguments', async () => {
-    throw new Error(
-      'test not yet defined... remove the throw and write your test here'
-    );
+    //From BTC to USD
+    expect(index()).toBeCloseTo(0.00018946678363082774);
   });
 
   test('should convert with amount only as argument', async () => {
-    throw new Error(
-      'test not yet defined... remove the throw and write your test here'
-    );
+      expect(index(5)).toBeCloseTo(5*0.00018946678363082774);
+      expect(index(10)).toBeCloseTo(0.0018946678363082774);
   });
 
   test('should convert with amount and (from) currency only as arguments', async () => {
-    throw new Error(
-      'test not yet defined... remove the throw and write your test here'
-    );
+    conversionOpts={
+      'from': 'BTC',
+      'to': 'EUR'
+    };
+    expect(index(1,conversionOpts)).tobe(4807.77);
   });
 
   test('should return errors message for unknown `from` or `to` currency value', async () => {

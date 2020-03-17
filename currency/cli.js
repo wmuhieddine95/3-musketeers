@@ -2,8 +2,9 @@ const axios = require('axios');
 const money = require('money');
 
 //Up_To_Date Recources (API)
-//URL where base is Eur
+//URL where base is Eur and BTC not found
 const RATES_URL = 'https://api.exchangeratesapi.io/latest';
+//Where we are going to get rates for BTC
 const BLOCKCHAIN_URL = 'https://blockchain.info/ticker';
 const CURRENCY_BITCOIN = 'BTC';
 // For 2 given args apply if BTC is included
@@ -54,7 +55,6 @@ module.exports = async opts => {
     //data Object having all rates wrt USD
     money.base = myfirstvalue.data.base;
     money.rates = myfirstvalue.data.rates;
-
     const conversionOpts = {
       from,
       to
